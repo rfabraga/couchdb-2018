@@ -1,0 +1,53 @@
+<!--
+  Generated template for the RegistroPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary" text-center>
+    <ion-title>Registro</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item color="light">
+      <ion-label stacked>Código</ion-label>
+      <ion-input type="text" [(ngModel)]="registro.codigo" required></ion-input>
+    </ion-item>
+
+    <ion-item color="light">
+      <ion-label stacked>Peso (Kg)</ion-label>
+      <ion-input type="text" [(ngModel)]="registro.peso" required></ion-input>
+    </ion-item>
+
+    <ion-item color="light">
+      <ion-label>Tipo do Animal</ion-label>
+      <ion-select [(ngModel)]="registro.tipo_animal" required>
+        <ion-option value="Bovino">Bovino</ion-option>
+        <ion-option value="Suíno">Suíno</ion-option>
+        <ion-option value="Equino">Equino</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item color="light">
+      <ion-label stacked>Observações</ion-label>
+      <ion-input type="text" [(ngModel)]="registro.observacoes" required></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-row *ngIf="!registro_nav">
+    <ion-col col-8 offset-2>
+      <button ion-button block (click)="createRegistro()">Salvar Registro</button>
+    </ion-col>
+  </ion-row>
+
+  <ion-row *ngIf="registro_nav">
+    <ion-col col-8 offset-2>
+      <button ion-button block (click)="updateRegistro()">Salvar Registro</button>
+    </ion-col>
+  </ion-row>
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "agrowatcher",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
