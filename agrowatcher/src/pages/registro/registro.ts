@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, ToastController } from 'ionic-angular';
 
-
 import { RegistrosProvider } from '../../providers/registros/registros';
 /**
  * Generated class for the RegistroPage page.

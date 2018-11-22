@@ -22,8 +22,8 @@ export class HomePage {
   }
 
   /**
-   * [getRegistros description]
-   *
+   * Chama a função para pegar registros na base indexada
+   * @return void
    */
   getRegistros(): void {
     let loader = this.loadingCtrl.create({
@@ -40,7 +40,7 @@ export class HomePage {
 
 
   /**
-   * [buscarRegistro description]
+   * Função para filtrar registros baseados no código
    * @param {any} ev [description]
    */
   buscarRegistro(ev: any): void {
@@ -56,15 +56,16 @@ export class HomePage {
   }
 
   /**
-   * [abrirRegistro description]
-   * @param {any} registro [description]
+   * Abre a página de registro
+   * @param {any} registro Registro a ser editado 
    */
   abrirRegistro(registro: any): void {
     this.navCtrl.push('RegistroPage', { 'registro': registro });
   }
 
   /**
-   * [deleteRegistro description]
+   * Exibe alerta de confirmação de exclusão de registro
+   * Caso confirmado, exclui registro do banco indexado
    * @param {any} registro [description]
    */
   deleteRegistro(registro: any): void {

@@ -15,9 +15,9 @@ export class RegistrosProvider {
   private db: any;
   private remote: any;
   private options: any = {
-    live: true,
-    retry: true,
-    continuous: true
+    live: false,
+    retry: false,
+    continuous: false
   }
 
   constructor(public http: HttpClient) {
